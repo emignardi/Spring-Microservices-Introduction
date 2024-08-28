@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "e126d6dd-c601-4c9d-a194-e52b6ce91cf3",
+		"name": "LearnMicroservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34580428"
+	},
+	"item": [
+		{
+			"name": "Get Movie Info (w/o Gateway)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/movie-info/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie-info",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Movie Info (w/o Gateway)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"name\": \"blink-182 - Not Now\",\r\n    \"description\": \"Music Video\",\r\n    \"path\": \"blink-182 - Not Now.mp4\"\r\n  },\r\n  {\r\n    \"name\": \"blink-182 - Adam's Song\",\r\n    \"description\": \"Music Video\",\r\n    \"path\": \"blink-182 - Adam's Song.mp4\"\r\n  },\r\n  {\r\n    \"name\": \"blink-182 - All The Small Things\",\r\n    \"description\": \"Music Video\",\r\n    \"path\": \"blink-182 - All The Small Things.mp4\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/movie-info/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie-info",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie Info (w Gateway)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movie-info/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie-info",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
